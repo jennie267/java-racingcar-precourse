@@ -52,5 +52,12 @@ public class CarTest {
 	void 이름_5자_초과() {
 		assertThrows(IllegalArgumentException.class,() -> new Car("jennie"));
 	}
+	
+	@DisplayName("0에서 9사이의 랜덤값 생성")
+	@Test
+	void 랜덤값_생성() {
+		int randomNumber = car.makeRandomNumber();
+		assertThat(randomNumber > -1 && randomNumber <10).isTrue();
+	}
 
 }

@@ -1,5 +1,7 @@
 package racinggame;
 
+import nextstep.utils.Randoms;
+
 public class Car {
 	private final CarName name;
 	private int position;
@@ -25,6 +27,10 @@ public class Car {
 		if (randomNumber >= 4) {
 			go();
 		}
+	}
+	
+	public int makeRandomNumber() {
+		return Randoms.pickNumberInRange(0, 9);
 	}
 
 }

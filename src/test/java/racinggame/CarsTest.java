@@ -21,10 +21,4 @@ public class CarsTest {
 		assertThat(cars.countCar()).isEqualTo(3);
 	}
 
-	@DisplayName("0에서 9사이의 랜덤값 생성")
-	@Test
-	void 랜덤값_생성() {
-		int randomNumber = cars.makeRandomNumber();
-		assertThat(randomNumber > -1 && randomNumber <10).isTrue();
-	}
 }
