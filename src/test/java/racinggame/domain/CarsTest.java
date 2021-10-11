@@ -35,7 +35,7 @@ public class CarsTest {
                     .thenReturn(3,5,7);
             cars.play();
             cars.endGame();
-            assertThat(cars.endGame()).contains("car2,car3");
+            assertThat(cars.endGame().toString()).contains("car2,car3");
         }
 	}
 

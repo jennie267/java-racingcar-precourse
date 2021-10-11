@@ -39,26 +39,10 @@ public class Cars implements Iterable<Car> {
 		return cars;
 	}
 
-	public String endGame() {
-		String[] winner = { "", "" };
+	public Winner endGame() {
+		Winner winner = new Winner();
 		for (Car car : cars) {
-			winner = findWinner(winner, car);
-		}
-		if (winner[1].indexOf(",") == 0) {
-			winner[1] = winner[1].substring(1);
-		}
-		return winner[1];
-	}
-
-	private String[] findWinner(String[] winner, Car car) {
-		if (winner[0].length() < car.getLength()) {
-			winner[0] = car.getPosition();
-			winner[1] = car.getCarName().getName();
-			return winner;
-		}
-		if (winner[0].length() == car.getLength()) {
-			winner[1] += "," + car.getCarName().getName();
-			return winner;
+			winner.findWinner(car);
 		}
 		return winner;
 	}

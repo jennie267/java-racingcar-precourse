@@ -3,6 +3,7 @@ package racinggame.view;
 import nextstep.utils.Console;
 import racinggame.domain.Car;
 import racinggame.domain.Cars;
+import racinggame.domain.Winner;
 
 public class GameView {
 
@@ -32,8 +33,8 @@ public class GameView {
 		System.out.println();
 	}
 
-	public void printWinner(String winner) {
-		System.out.println("최종 우승자는 " + winner + " 입니다.");
+	public void printWinner(Winner winner) {
+		System.out.println("최종 우승자는 " + winner.toString() + " 입니다.");
 	}
 
 }
