@@ -50,9 +50,11 @@ public class Cars {
 		if (winner[0].length() < car.getLength()) {
 			winner[0] = car.getPosition();
 			winner[1] = car.getCarName().getName();
+			return winner;
 		}
 		if (winner[0].length() == car.getLength()) {
 			winner[1] += "," + car.getCarName().getName();
+			return winner;
 		}
 		return winner;
 	}
