@@ -1,6 +1,8 @@
 package racinggame.domain;
 
 public class Car {
+	public static final int MOVE_STANDARD_NUMBER = 4;
+	
 	private final CarName name;
 	private StringBuilder position;
 
@@ -22,7 +24,7 @@ public class Car {
 	}
 
 	public void move(int randomNumber) {
-		if (randomNumber >= 4) {
+		if (randomNumber >= MOVE_STANDARD_NUMBER) {
 			go();
 		}
 	}
