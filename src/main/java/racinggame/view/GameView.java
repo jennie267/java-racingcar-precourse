@@ -1,6 +1,9 @@
 package racinggame.view;
 
+import java.util.List;
+
 import nextstep.utils.Console;
+import racinggame.Car;
 
 public class GameView {
 
@@ -21,6 +24,13 @@ public class GameView {
 
 	public void printErrorMessage(String error) {
 		System.out.println(error);
+	}
+	
+	public void printResult(List<Car> cars) {
+		for (Car car : cars) {
+			System.out.println(car.getCarName().getName() + " : " + car.getPosition());
+		}
+		System.out.println();
 	}
 	
 

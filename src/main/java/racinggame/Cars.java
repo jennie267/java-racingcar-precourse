@@ -3,6 +3,8 @@ package racinggame;
 import java.util.ArrayList;
 import java.util.List;
 
+import nextstep.utils.Randoms;
+
 public class Cars {
 	private final List<Car> cars;
 
@@ -21,6 +23,16 @@ public class Cars {
 
 	public int countCar() {
 		return cars.size();
+	}
+
+	public void play() {
+		for (Car car : cars) {
+			car.move(Randoms.pickNumberInRange(0, 9));
+		}
+	}
+
+	public List<Car> getCars() {
+		return cars;
 	}
 
 }
