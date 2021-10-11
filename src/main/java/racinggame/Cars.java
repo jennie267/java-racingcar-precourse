@@ -3,13 +3,15 @@ package racinggame;
 import java.util.ArrayList;
 import java.util.List;
 
+import nextstep.utils.Randoms;
+
 public class Cars {
 	private final List<Car> cars;
 
 	public Cars(String inputCars) {
 		this.cars = mapCar(inputCars);
 	}
-	
+
 	private static List<Car> mapCar(String inputCars) {
 		String[] splitCars = inputCars.split(",");
 		List<Car> cars = new ArrayList<Car>();
@@ -21,6 +23,10 @@ public class Cars {
 
 	public int countCar() {
 		return cars.size();
+	}
+
+	public int makeRandomNumber() {
+		return Randoms.pickNumberInRange(0, 9);
 	}
 
 }
