@@ -1,14 +1,12 @@
 package racinggame;
 
-import nextstep.utils.Randoms;
-
 public class Car {
 	private final CarName name;
-	private int position;
+	private StringBuilder position;
 
 	public Car(String name) {
 		this.name = new CarName(name);
-		this.position = 0;
+		this.position = new StringBuilder();
 	}
 
 	public CarName getCarName() {
@@ -16,11 +14,11 @@ public class Car {
 	}
 
 	private void go() {
-		this.position++;
+		position.append("-");
 	}
 
-	public int getPosition() {
-		return this.position;
+	public String getPosition() {
+		return this.position.toString();
 	}
 
 	public void move(int randomNumber) {
@@ -29,8 +27,8 @@ public class Car {
 		}
 	}
 	
-	public int makeRandomNumber() {
-		return Randoms.pickNumberInRange(0, 9);
+	public int getLength() {
+		return this.position.length();
 	}
 
 }
