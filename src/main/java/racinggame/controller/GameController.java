@@ -12,7 +12,7 @@ public class GameController {
 		int tryNumber = gameView.enterTryNumber();
 		for (int i = 0; i < tryNumber; i++) {
 			cars.play();
-			gameView.printResult(cars.getCars());
+			gameView.printResult(cars);
 		}
 		gameView.printWinner(cars.endGame());
 	}

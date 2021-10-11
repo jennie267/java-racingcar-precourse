@@ -1,11 +1,12 @@
 package racinggame.domain;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import nextstep.utils.Randoms;
 
-public class Cars {
+public class Cars implements Iterable<Car> {
 	private final List<Car> cars;
 
 	public Cars(String inputCars) {
@@ -14,6 +15,9 @@ public class Cars {
 
 	private static List<Car> mapCar(String inputCars) {
 		String[] splitCars = inputCars.split(",");
+		if (splitCars.length == 0) {
+			throw new IllegalArgumentException("[ERROR] 자동차를 하나 이상 입력해주세요.");
+		}
 		List<Car> cars = new ArrayList<Car>();
 		for (String car : splitCars) {
 			cars.add(new Car(car));
@@ -57,6 +61,11 @@ public class Cars {
 			return winner;
 		}
 		return winner;
+	}
+
+	@Override
+	public Iterator<Car> iterator() {
+		return cars.iterator();
 	}
 
 }

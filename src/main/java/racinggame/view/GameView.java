@@ -1,9 +1,8 @@
 package racinggame.view;
 
-import java.util.List;
-
 import nextstep.utils.Console;
 import racinggame.domain.Car;
+import racinggame.domain.Cars;
 
 public class GameView {
 
@@ -26,7 +25,7 @@ public class GameView {
 		System.out.println(error);
 	}
 
-	public void printResult(List<Car> cars) {
+	public void printResult(Cars cars) {
 		for (Car car : cars) {
 			System.out.println(car.getCarName().getName() + " : " + car.getPosition());
 		}
