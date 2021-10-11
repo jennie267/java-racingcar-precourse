@@ -14,6 +14,7 @@ public class GameController {
 			cars.play();
 			gameView.printResult(cars.getCars());
 		}
+		gameView.printWinner(cars.endGame());
 	}
 
 	private Cars enterCars() {
