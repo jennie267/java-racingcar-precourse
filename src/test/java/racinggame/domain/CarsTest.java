@@ -1,4 +1,4 @@
-package racinggame;
+package racinggame.domain;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.anyInt;

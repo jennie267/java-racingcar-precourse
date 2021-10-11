@@ -1,4 +1,4 @@
-package racinggame;
+package racinggame.domain;
 
 public class CarName {
 	public static final int MAX_LENGTH = 5;

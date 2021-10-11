@@ -3,7 +3,7 @@ package racinggame.view;
 import java.util.List;
 
 import nextstep.utils.Console;
-import racinggame.Car;
+import racinggame.domain.Car;
 
 public class GameView {
 
